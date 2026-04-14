@@ -57,7 +57,21 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
+.timeline-category {
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(41, 98, 255, 0.1);
+  color: var(--accent-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
 .timeline-date {
+  display: block;
   color: var(--accent-color);
   font-size: 0.9rem;
   font-weight: 600;
@@ -77,9 +91,25 @@
   margin-bottom: 0.5rem;
 }
 
+.timeline-location {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
 .timeline-description {
   color: var(--text-secondary);
   line-height: 1.7;
+}
+
+.timeline-highlights {
+  margin-top: 1rem;
+  padding-left: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.timeline-highlights li + li {
+  margin-top: 0.65rem;
 }
 
 @media (max-width: 768px) {

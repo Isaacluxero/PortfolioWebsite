@@ -8,9 +8,9 @@ interface ContactLink {
 
 const Contact = () => {
   const contactLinks: ContactLink[] = [
-    { icon: '✉', label: 'Email', href: 'mailto:your.email@example.com' },
-    { icon: '⚡', label: 'GitHub', href: 'https://github.com/yourusername' },
-    { icon: '◆', label: 'LinkedIn', href: 'https://linkedin.com/in/yourusername' },
+    { icon: '✉', label: 'Email', href: 'mailto:isaacluxero@gmail.com' },
+    { icon: '⚡', label: 'GitHub', href: 'https://github.com/Isaacluxero' },
+    { icon: '◆', label: 'LinkedIn', href: 'https://www.linkedin.com/in/isaac-lucero-073563185/' },
   ]
 
   return (

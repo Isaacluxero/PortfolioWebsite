@@ -1,22 +1,14 @@
 import { useEffect, useRef } from 'react'
+import ProjectPreview from './ProjectPreview'
+import { projects } from '../data/projects'
 import '../styles/Work.css'
 
-interface Project {
-  id: number
-  title: string
-  description: string
-  tags: string[]
+interface WorkProps {
+  onNavigate: (path: string) => void
 }
 
-const Work = () => {
+const Work = ({ onNavigate }: WorkProps) => {
   const cardsRef = useRef<HTMLDivElement>(null)
-
-  const placeholderProjects: Project[] = [
-    { id: 1, title: 'Project Title', description: 'Project description will appear here', tags: ['Coming Soon'] },
-    { id: 2, title: 'Project Title', description: 'Project description will appear here', tags: ['Coming Soon'] },
-    { id: 3, title: 'Project Title', description: 'Project description will appear here', tags: ['Coming Soon'] },
-    { id: 4, title: 'Project Title', description: 'Project description will appear here', tags: ['Coming Soon'] },
-  ]
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -42,17 +34,18 @@ const Work = () => {
     <section id="work" className="work-section">
       <div className="container">
         <h2 className="section-title">Selected Work</h2>
-        <p className="section-subtitle">Projects and creations coming soon</p>
+        <p className="section-subtitle">A few projects that show the kind of product and automation work I can build for clients.</p>
 
         <div className="work-grid" ref={cardsRef}>
-          {placeholderProjects.map((project) => (
-            <div key={project.id} className="work-card placeholder">
+          {projects.map((project) => (
+            <article key={project.id} className="work-card">
               <div className="work-image-placeholder">
-                <span className="placeholder-icon">{String(project.id).padStart(2, '0')}</span>
+                <ProjectPreview variant={project.preview} compact />
               </div>
               <div className="work-content">
                 <h3>{project.title}</h3>
-                <p>{project.description}</p>
+                <p>{project.shortDescription}</p>
+                <p className="work-outcome">{project.outcome}</p>
                 <div className="work-tags">
                   {project.tags.map((tag, index) => (
                     <span key={index} className="tag">
@@ -60,8 +53,21 @@ const Work = () => {
                     </span>
                   ))}
                 </div>
+                <div className="work-links">
+                  <button className="work-link work-link-primary" onClick={() => onNavigate(`/projects/${project.slug}`)}>
+                    View Project
+                  </button>
+                  <a href={project.repoUrl} target="_blank" rel="noreferrer" className="work-link">
+                    View Code
+                  </a>
+                  {project.liveUrl ? (
+                    <a href={project.liveUrl} target="_blank" rel="noreferrer" className="work-link">
+                      Live Demo
+                    </a>
+                  ) : null}
+                </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>
