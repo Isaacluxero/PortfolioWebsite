@@ -17,19 +17,52 @@
   padding: 0;
   background: #111827;
   overflow: hidden;
+  border: 1px solid rgba(10, 10, 10, 0.08);
 }
 
 .screenshot-preview img {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
   object-position: top center;
+  background: #f8fafc;
 }
 
-.project-hero-visual .screenshot-preview img {
-  object-fit: contain;
-  background: #f7f9fc;
+.screenshot-preview.compact img {
+  object-fit: cover;
+}
+
+.screenshot-preview.framed {
+  background: #111827;
+  padding-top: 34px;
+  position: relative;
+}
+
+.screenshot-preview.framed img {
+  height: calc(100% - 34px);
+  object-fit: cover;
+}
+
+.preview-browser-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 14px;
+  background: #111827;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.preview-browser-bar span {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
 }
 
 .preview-topbar {

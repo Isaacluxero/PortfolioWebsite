@@ -17,10 +17,10 @@ const ProjectDetail = ({ project, onNavigate }: ProjectDetailProps) => {
 
         <section className="project-hero-panel">
           <div className="project-hero-copy">
-            <p className="project-kicker">Project Deep Dive</p>
+            <p className="project-kicker">Client-Facing Case Study</p>
             <h1>{project.title}</h1>
             <p className="project-summary">{project.shortDescription}</p>
-            <p className="project-role">{project.role}</p>
+            <p className="project-value">{project.clientValue}</p>
             <div className="project-actions">
               {project.liveUrl ? (
                 <a href={project.liveUrl} target="_blank" rel="noreferrer" className="detail-link detail-link-primary">
@@ -30,25 +30,59 @@ const ProjectDetail = ({ project, onNavigate }: ProjectDetailProps) => {
             </div>
           </div>
           <div className="project-hero-visual">
-            <ProjectPreview variant={project.preview} imageSrc={project.imageSrc} imageAlt={project.imageAlt} />
+            <ProjectPreview variant={project.preview} imageSrc={project.imageSrc} imageAlt={project.imageAlt} framed />
+          </div>
+        </section>
+
+        <section className="project-tour">
+          <div className="project-section-heading">
+            <p className="project-kicker">Product Tour</p>
+            <h2>What a client is looking at</h2>
+            <p>
+              These are real screens from the running app. The captions explain the business workflow, not just the technology behind it.
+            </p>
+          </div>
+
+          <div className="screenshot-gallery">
+            {project.screenshots.map((screenshot, index) => (
+              <article className={`screenshot-card ${index === 0 ? 'featured' : ''}`} key={screenshot.src}>
+                <div className="screenshot-frame">
+                  <img src={screenshot.src} alt={screenshot.alt} />
+                </div>
+                <div className="screenshot-copy">
+                  <span>{String(index + 1).padStart(2, '0')}</span>
+                  <h3>{screenshot.title}</h3>
+                  <p>{screenshot.caption}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 
         <section className="project-detail-grid">
+          <article className="detail-card full-width case-card">
+            <p className="detail-eyebrow">My role</p>
+            <h2>What I built</h2>
+            <p>{project.role}</p>
+          </article>
           <article className="detail-card">
-            <h2>Problem</h2>
+            <p className="detail-eyebrow">Problem</p>
+            <h2>The business gap</h2>
             <p>{project.problem}</p>
           </article>
           <article className="detail-card">
-            <h2>Solution</h2>
+            <p className="detail-eyebrow">Solution</p>
+            <h2>The product approach</h2>
             <p>{project.solution}</p>
           </article>
           <article className="detail-card">
-            <h2>Impact</h2>
+            <p className="detail-eyebrow">Impact</p>
+            <h2>Why it matters</h2>
             <p>{project.impact}</p>
           </article>
           <article className="detail-card">
-            <h2>Key Features</h2>
+            <p className="detail-eyebrow">Features</p>
+            <h2>What it can do</h2>
             <ul className="detail-list">
               {project.features.map((feature) => (
                 <li key={feature}>{feature}</li>
@@ -56,6 +90,7 @@ const ProjectDetail = ({ project, onNavigate }: ProjectDetailProps) => {
             </ul>
           </article>
           <article className="detail-card full-width">
+            <p className="detail-eyebrow">Build</p>
             <h2>Tech Stack</h2>
             <div className="detail-tags">
               {project.stack.map((item) => (

@@ -5,12 +5,20 @@ interface ProjectPreviewProps {
   compact?: boolean
   imageSrc?: string
   imageAlt?: string
+  framed?: boolean
 }
 
-const ProjectPreview = ({ variant, compact = false, imageSrc, imageAlt }: ProjectPreviewProps) => {
+const ProjectPreview = ({ variant, compact = false, imageSrc, imageAlt, framed = false }: ProjectPreviewProps) => {
   if (variant === 'screenshot' && imageSrc) {
     return (
-      <div className={`project-preview screenshot-preview ${compact ? 'compact' : ''}`}>
+      <div className={`project-preview screenshot-preview ${compact ? 'compact' : ''} ${framed ? 'framed' : ''}`}>
+        {framed ? (
+          <div className="preview-browser-bar" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        ) : null}
         <img src={imageSrc} alt={imageAlt ?? ''} />
       </div>
     )

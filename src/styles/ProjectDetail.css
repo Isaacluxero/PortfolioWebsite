@@ -1,6 +1,6 @@
 .project-detail-page {
   min-height: 100vh;
-  background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+  background: #f7f7f4;
   padding: 6rem 0 4rem;
 }
 
@@ -22,10 +22,12 @@
 
 .project-hero-panel {
   display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 2rem;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.25fr);
+  gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.08);
 }
 
 .project-kicker {
@@ -39,8 +41,8 @@
 
 .project-hero-copy h1 {
   font-size: clamp(2.5rem, 6vw, 4.5rem);
-  line-height: 0.98;
-  letter-spacing: -0.04em;
+  line-height: 1;
+  letter-spacing: 0;
   margin-bottom: 1rem;
 }
 
@@ -51,10 +53,13 @@
   max-width: 42rem;
 }
 
-.project-role {
+.project-value {
   color: var(--text-secondary);
   margin-bottom: 1.5rem;
   max-width: 40rem;
+  font-size: 1.05rem;
+  border-left: 3px solid var(--accent-color);
+  padding-left: 1rem;
 }
 
 .project-actions {
@@ -95,10 +100,113 @@
 }
 
 .project-hero-visual {
-  min-height: 420px;
-  border-radius: 26px;
+  height: clamp(360px, 40vw, 560px);
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 24px 60px rgba(31, 52, 103, 0.14);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.18);
+}
+
+.project-tour {
+  margin-bottom: 3rem;
+}
+
+.project-section-heading {
+  max-width: 760px;
+  margin-bottom: 1.5rem;
+}
+
+.project-section-heading h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+  margin-bottom: 0.85rem;
+}
+
+.project-section-heading p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.screenshot-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.screenshot-card {
+  background: #fff;
+  border: 1px solid rgba(10, 10, 10, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.06);
+}
+
+.screenshot-card.featured {
+  grid-column: 1 / -1;
+}
+
+.screenshot-frame {
+  aspect-ratio: 16 / 10;
+  background: #111827;
+  border-bottom: 1px solid rgba(10, 10, 10, 0.08);
+  overflow: hidden;
+  padding-top: 30px;
+  position: relative;
+}
+
+.screenshot-frame::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: #111827;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.screenshot-frame::after {
+  content: '';
+  position: absolute;
+  top: 11px;
+  left: 14px;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow:
+    14px 0 0 rgba(255, 255, 255, 0.34),
+    28px 0 0 rgba(255, 255, 255, 0.22);
+}
+
+.screenshot-frame img {
+  width: 100%;
+  height: calc(100% - 30px);
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.screenshot-copy {
+  padding: 1.25rem;
+}
+
+.screenshot-copy span {
+  color: var(--accent-color);
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.45rem;
+}
+
+.screenshot-copy h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.screenshot-copy p {
+  color: var(--text-secondary);
 }
 
 .project-detail-grid {
@@ -109,14 +217,14 @@
 
 .detail-card {
   background: #fff;
-  border: 1px solid var(--border-color);
-  border-radius: 24px;
+  border: 1px solid rgba(10, 10, 10, 0.08);
+  border-radius: 8px;
   padding: 1.4rem;
-  box-shadow: 0 14px 40px rgba(31, 52, 103, 0.06);
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.05);
 }
 
 .detail-card h2 {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   margin-bottom: 0.85rem;
 }
 
@@ -126,6 +234,24 @@
 
 .detail-card.full-width {
   grid-column: 1 / -1;
+}
+
+.case-card {
+  background: #0f172a;
+  color: #fff;
+}
+
+.case-card p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.detail-eyebrow {
+  color: var(--accent-color) !important;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.45rem;
+  text-transform: uppercase;
 }
 
 .detail-list {
@@ -153,11 +279,16 @@
 
 @media (max-width: 900px) {
   .project-hero-panel,
-  .project-detail-grid {
+  .project-detail-grid,
+  .screenshot-gallery {
     grid-template-columns: 1fr;
   }
 
   .project-hero-visual {
-    min-height: 320px;
+    height: 320px;
+  }
+
+  .screenshot-card.featured {
+    grid-column: auto;
   }
 }

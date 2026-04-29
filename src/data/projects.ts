@@ -1,3 +1,10 @@
+export interface ProjectScreenshot {
+  src: string
+  alt: string
+  title: string
+  caption: string
+}
+
 export interface ProjectRecord {
   id: number
   slug: string
@@ -9,6 +16,8 @@ export interface ProjectRecord {
   preview: 'inbox' | 'restaurant' | 'carrier' | 'screenshot'
   imageSrc?: string
   imageAlt?: string
+  screenshots: ProjectScreenshot[]
+  clientValue: string
   role: string
   problem: string
   solution: string
@@ -30,6 +39,28 @@ export const projects: ProjectRecord[] = [
     preview: 'screenshot',
     imageSrc: '/project-screenshots/cattle-record.png',
     imageAlt: 'CattleRecord dashboard showing herd totals, equipment, sync status, and Google Sheets reporting.',
+    clientValue:
+      'For a ranch client, this is the difference between scattered paper records and a phone-friendly operating system that still works when there is no signal.',
+    screenshots: [
+      {
+        src: '/project-screenshots/cattle-record.png',
+        alt: 'CattleRecord summary dashboard showing herd totals and sync status.',
+        title: 'Owner dashboard',
+        caption: 'A quick summary of herd totals, sync state, and the Google Sheets report link so the operator can understand the ranch at a glance.',
+      },
+      {
+        src: '/project-screenshots/cattle-record-inventory.png',
+        alt: 'CattleRecord inventory table with active cattle records.',
+        title: 'Active cattle inventory',
+        caption: 'The working inventory view for tags, sex, descriptions, entry type, weights, and searchable ranch records.',
+      },
+      {
+        src: '/project-screenshots/cattle-record-assets.png',
+        alt: 'CattleRecord equipment and assets screen.',
+        title: 'Equipment tracking',
+        caption: 'Assets are tracked alongside animals so equipment value, identifiers, and locations stay connected to the operation.',
+      },
+    ],
     role: 'Built the product, data model, bilingual interface, offline storage, sync flow, and reporting workflow.',
     problem:
       'Ranch records are often split between paper notes, spreadsheets, and memory, which makes it hard to check inventory or sales information when working away from a desk.',
@@ -56,6 +87,34 @@ export const projects: ProjectRecord[] = [
     preview: 'screenshot',
     imageSrc: '/project-screenshots/apartments-record.png',
     imageAlt: 'ApartmentRecord dashboard showing portfolio totals, rent collected, units, residents, and property cards.',
+    clientValue:
+      'For a property owner, this turns a small portfolio into a clean control panel for rent, residents, maintenance, and reporting.',
+    screenshots: [
+      {
+        src: '/project-screenshots/apartments-record.png',
+        alt: 'ApartmentRecord portfolio dashboard with rent and property totals.',
+        title: 'Portfolio overview',
+        caption: 'A management view that surfaces buildings, units, resident count, rent collected, and open maintenance in one place.',
+      },
+      {
+        src: '/project-screenshots/apartments-record-units.png',
+        alt: 'ApartmentRecord units screen for building and unit management.',
+        title: 'Unit-level records',
+        caption: 'Each unit can hold resident count, preferred language, contact details, and building-specific context.',
+      },
+      {
+        src: '/project-screenshots/apartments-record-rent.png',
+        alt: 'ApartmentRecord rent tracking screen.',
+        title: 'Rent tracking',
+        caption: 'Rent status and payment history are separated from general notes so owners can review cash flow quickly.',
+      },
+      {
+        src: '/project-screenshots/apartments-record-maintenance.png',
+        alt: 'ApartmentRecord maintenance screen.',
+        title: 'Maintenance workflow',
+        caption: 'Building and unit maintenance are tracked in the same app, which keeps operational work tied to the right property.',
+      },
+    ],
     role: 'Built the full management workflow, private login, database-backed records, seeded portfolio, and reporting views.',
     problem:
       'Small property portfolios can become messy when rent history, resident counts, contacts, and maintenance notes live in separate spreadsheets or messages.',
@@ -83,6 +142,34 @@ export const projects: ProjectRecord[] = [
     preview: 'screenshot',
     imageSrc: '/project-screenshots/inbox-concierge.png',
     imageAlt: 'Inbox Concierge sign-in screen for an AI-powered email management product.',
+    clientValue:
+      'For a busy operator, this shows how AI can remove inbox triage work and make old messages searchable by intent instead of exact keywords.',
+    screenshots: [
+      {
+        src: '/project-screenshots/inbox-concierge.png',
+        alt: 'Inbox Concierge login screen.',
+        title: 'Secure Gmail entry point',
+        caption: 'The product starts with Google login because the workflow depends on real inbox access, not manual file upload.',
+      },
+      {
+        src: '/project-screenshots/inbox-concierge-inbox.png',
+        alt: 'Inbox Concierge bucketed inbox view.',
+        title: 'AI-sorted inbox',
+        caption: 'Messages are grouped into useful buckets so a user can immediately separate important work from noise.',
+      },
+      {
+        src: '/project-screenshots/inbox-concierge-search.png',
+        alt: 'Inbox Concierge natural-language search results.',
+        title: 'Natural-language search',
+        caption: 'The user can ask for messages by topic, sender, and timeframe instead of remembering the exact subject line.',
+      },
+      {
+        src: '/project-screenshots/inbox-concierge-insights.png',
+        alt: 'Inbox Concierge email insights dashboard.',
+        title: 'Email insights',
+        caption: 'Analytics show volume, sender patterns, and inbox behavior so the product feels like a business tool, not just a search box.',
+      },
+    ],
     role: 'Designed and built a full-stack product experience around inbox organization and AI-powered retrieval.',
     problem:
       'Email gets noisy fast, and most inbox tools still force people to manually sort, search, and re-open messages that should be easy to find.',
@@ -109,6 +196,28 @@ export const projects: ProjectRecord[] = [
     preview: 'screenshot',
     imageSrc: '/project-screenshots/restaurant-order-voice-agent.png',
     imageAlt: 'Voice Agent Dashboard showing call totals, order totals, success rate, revenue, and top menu items.',
+    clientValue:
+      'For a restaurant, this is a phone assistant that captures orders while staff stay focused on customers in front of them.',
+    screenshots: [
+      {
+        src: '/project-screenshots/restaurant-order-voice-agent.png',
+        alt: 'Restaurant voice agent metrics dashboard.',
+        title: 'Call and revenue metrics',
+        caption: 'The dashboard shows calls, confirmed orders, success rate, estimated revenue, and the menu items people order most.',
+      },
+      {
+        src: '/project-screenshots/restaurant-order-history.png',
+        alt: 'Restaurant voice agent order history screen.',
+        title: 'Order history',
+        caption: 'Staff can review completed calls, transcripts, and what the system understood from each customer conversation.',
+      },
+      {
+        src: '/project-screenshots/restaurant-menu.png',
+        alt: 'Restaurant voice agent menu management screen.',
+        title: 'Menu-aware automation',
+        caption: 'The agent is connected to a real menu structure, which matters because orders need validation, pricing, and modifiers.',
+      },
+    ],
     role: 'Built the backend orchestration, menu-driven voice flow, and dashboard experience for a phone-based ordering workflow.',
     problem:
       'Restaurants often lose time and revenue handling phone orders manually, especially during busy periods when staff need to focus on in-person operations.',
@@ -135,6 +244,28 @@ export const projects: ProjectRecord[] = [
     preview: 'screenshot',
     imageSrc: '/project-screenshots/carrier-sales-agent.png',
     imageAlt: 'Carrier Sales Agent dashboard showing calls, loads, success rate, sentiment, outcomes, and load distribution.',
+    clientValue:
+      'For a logistics team, this turns calls, carrier checks, load searches, and negotiation outcomes into a management dashboard.',
+    screenshots: [
+      {
+        src: '/project-screenshots/carrier-sales-agent.png',
+        alt: 'Carrier Sales Agent summary dashboard.',
+        title: 'Operations dashboard',
+        caption: 'Leadership can see total calls, load volume, success rate, call outcomes, and equipment distribution without digging through logs.',
+      },
+      {
+        src: '/project-screenshots/carrier-sales-loads.png',
+        alt: 'Carrier Sales Agent available loads screen.',
+        title: 'Available loads',
+        caption: 'The load search view gives teams a focused place to review freight opportunities and route details.',
+      },
+      {
+        src: '/project-screenshots/carrier-sales-calls.png',
+        alt: 'Carrier Sales Agent call logs screen.',
+        title: 'Call visibility',
+        caption: 'Call records make the sales workflow measurable, including carrier identity, call outcome, duration, and sentiment.',
+      },
+    ],
     role: 'Built a logistics-focused internal platform that ties together backend services, dashboards, and operational workflows.',
     problem:
       'Carrier sales teams need quick visibility into compliance, loads, calls, and negotiation activity, but the workflow is often split across disconnected internal tools.',
