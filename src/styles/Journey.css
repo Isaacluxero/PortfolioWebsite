@@ -3,9 +3,50 @@
   background: white;
 }
 
+.education-panel {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1.5rem;
+  border: 1px solid rgba(10, 10, 10, 0.08);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.05);
+}
+
+.education-label {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(41, 98, 255, 0.1);
+  color: var(--accent-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.education-panel h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.education-panel p {
+  color: var(--text-secondary);
+}
+
+.education-school {
+  font-weight: 650;
+  margin-bottom: 0.6rem;
+}
+
 .journey-timeline {
   max-width: 800px;
-  margin: 3rem auto 0;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -113,6 +154,11 @@
 }
 
 @media (max-width: 768px) {
+  .education-panel {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
   .journey-timeline::before {
     left: 10px;
   }

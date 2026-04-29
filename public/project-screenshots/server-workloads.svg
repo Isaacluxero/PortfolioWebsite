@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 960" role="img" aria-labelledby="title desc">
+  <title id="title">Sanitized server workload layout</title>
+  <desc id="desc">High-level service categories running on the private server infrastructure.</desc>
+  <rect width="1440" height="960" fill="#f6f7f4"/>
+  <rect x="72" y="72" width="1296" height="816" rx="28" fill="#ffffff" stroke="#d9ded6" stroke-width="2"/>
+  <text x="116" y="142" fill="#101827" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800">Service Layout</text>
+  <text x="116" y="186" fill="#667085" font-family="Inter, Arial, sans-serif" font-size="24">A small server should feel organized, observable, and maintainable</text>
+
+  <rect x="118" y="256" width="1204" height="168" rx="20" fill="#111827"/>
+  <text x="164" y="318" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800">k3s Cluster Layer</text>
+  <text x="164" y="364" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="22">Repeatable container deployment across two physical nodes</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="118" y="504" width="244" height="156" rx="18" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="152" y="566" fill="#1d4ed8" font-size="27" font-weight="800">Media</text>
+    <text x="152" y="610" fill="#475467" font-size="20">Streaming, libraries,</text>
+    <text x="152" y="640" fill="#475467" font-size="20">transcoding workflow</text>
+
+    <rect x="410" y="504" width="244" height="156" rx="18" fill="#ecfdf3" stroke="#86efac" stroke-width="2"/>
+    <text x="444" y="566" fill="#166534" font-size="27" font-weight="800">Files</text>
+    <text x="444" y="610" fill="#475467" font-size="20">Documents, storage,</text>
+    <text x="444" y="640" fill="#475467" font-size="20">and private tools</text>
+
+    <rect x="702" y="504" width="244" height="156" rx="18" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+    <text x="736" y="566" fill="#9a3412" font-size="27" font-weight="800">Automation</text>
+    <text x="736" y="610" fill="#475467" font-size="20">Jobs, workflows,</text>
+    <text x="736" y="640" fill="#475467" font-size="20">notifications</text>
+
+    <rect x="994" y="504" width="244" height="156" rx="18" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="2"/>
+    <text x="1028" y="566" fill="#6d28d9" font-size="27" font-weight="800">Dashboards</text>
+    <text x="1028" y="610" fill="#475467" font-size="20">Homepage, status,</text>
+    <text x="1028" y="640" fill="#475467" font-size="20">admin surfaces</text>
+
+    <rect x="264" y="716" width="320" height="120" rx="18" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="304" y="772" fill="#334155" font-size="26" font-weight="800">Persistent Storage</text>
+    <text x="304" y="812" fill="#667085" font-size="20">Volumes, shares, snapshots</text>
+
+    <rect x="856" y="716" width="320" height="120" rx="18" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="896" y="772" fill="#334155" font-size="26" font-weight="800">Private Access</text>
+    <text x="896" y="812" fill="#667085" font-size="20">Local-first, remote capable</text>
+  </g>
+
+  <line x1="720" y1="424" x2="720" y2="470" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+  <line x1="240" y1="470" x2="1116" y2="470" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+  <line x1="240" y1="470" x2="240" y2="504" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+  <line x1="532" y1="470" x2="532" y2="504" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+  <line x1="824" y1="470" x2="824" y2="504" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+  <line x1="1116" y1="470" x2="1116" y2="504" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+</svg>

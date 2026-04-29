@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 960" role="img" aria-labelledby="title desc">
+  <title id="title">Sanitized server operations model</title>
+  <desc id="desc">Operational practices around documentation, deployment, backups, monitoring, and incident response.</desc>
+  <rect width="1440" height="960" fill="#f6f7f4"/>
+  <rect x="72" y="72" width="1296" height="816" rx="28" fill="#ffffff" stroke="#d9ded6" stroke-width="2"/>
+  <text x="116" y="142" fill="#101827" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800">Operational Model</text>
+  <text x="116" y="186" fill="#667085" font-family="Inter, Arial, sans-serif" font-size="24">The difference between a server that works today and one that can be maintained later</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="150" y="286" width="320" height="174" rx="20" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+    <text x="194" y="352" fill="#1d4ed8" font-size="30" font-weight="800">Document</text>
+    <text x="194" y="398" fill="#475467" font-size="21">Inventory, topology,</text>
+    <text x="194" y="430" fill="#475467" font-size="21">runbooks, decisions</text>
+
+    <rect x="560" y="286" width="320" height="174" rx="20" fill="#ecfdf3" stroke="#86efac" stroke-width="2"/>
+    <text x="604" y="352" fill="#166534" font-size="30" font-weight="800">Deploy</text>
+    <text x="604" y="398" fill="#475467" font-size="21">Manifests, namespaces,</text>
+    <text x="604" y="430" fill="#475467" font-size="21">repeatable service setup</text>
+
+    <rect x="970" y="286" width="320" height="174" rx="20" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+    <text x="1014" y="352" fill="#9a3412" font-size="30" font-weight="800">Operate</text>
+    <text x="1014" y="398" fill="#475467" font-size="21">Health checks, logs,</text>
+    <text x="1014" y="430" fill="#475467" font-size="21">service dashboards</text>
+
+    <rect x="354" y="592" width="320" height="174" rx="20" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="2"/>
+    <text x="398" y="658" fill="#6d28d9" font-size="30" font-weight="800">Protect</text>
+    <text x="398" y="704" fill="#475467" font-size="21">Snapshots, backups,</text>
+    <text x="398" y="736" fill="#475467" font-size="21">private access boundaries</text>
+
+    <rect x="766" y="592" width="320" height="174" rx="20" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+    <text x="810" y="658" fill="#334155" font-size="30" font-weight="800">Improve</text>
+    <text x="810" y="704" fill="#475467" font-size="21">Incident notes, fixes,</text>
+    <text x="810" y="736" fill="#475467" font-size="21">and backlog tracking</text>
+  </g>
+
+  <path d="M470 373 C505 373 525 373 560 373" fill="none" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
+  <path d="M880 373 C915 373 935 373 970 373" fill="none" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
+  <path d="M1130 460 C1130 548 1080 612 1086 676" fill="none" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M766 676 C730 676 710 676 674 676" fill="none" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
+  <path d="M354 676 C270 676 226 608 226 474" fill="none" stroke="#94a3b8" stroke-width="6" stroke-linecap="round"/>
+</svg>

@@ -3,7 +3,7 @@ import '../styles/Journey.css'
 
 interface TimelineItem {
   id: number
-  category: 'Education' | 'Experience'
+  category: 'Experience'
   date: string
   title: string
   institution: string
@@ -15,20 +15,31 @@ interface TimelineItem {
 const Journey = () => {
   const itemsRef = useRef<HTMLDivElement>(null)
 
+  const education = {
+    school: 'University of California, Berkeley',
+    degree: 'B.A. Data Science, Minor in Computer Science',
+    description:
+      'Coursework in machine learning, AI, computer security, cloud computing, data science, and systems fundamentals.',
+  }
+
   const timelineData: TimelineItem[] = [
     {
       id: 1,
-      category: 'Education',
-      date: 'UC Berkeley',
-      title: 'B.A. Data Science, Minor in Computer Science',
-      institution: 'University of California, Berkeley',
+      category: 'Experience',
+      date: 'April 2026 - Present',
+      title: 'Forward Deployed Engineer',
+      institution: 'Innovaccer',
       description:
-        'Coursework focused on machine learning, AI, computer security, cloud computing, data science, and systems fundamentals.',
+        'Building and deploying client-facing healthcare technology solutions that connect product engineering with real operational workflows.',
+      highlights: [
+        'Work directly with implementation context to translate customer needs into usable product behavior.',
+        'Bridge engineering, data, and stakeholder requirements in forward-deployed environments.',
+      ],
     },
     {
       id: 2,
       category: 'Experience',
-      date: 'Jun 2024 - Jan 2026',
+      date: 'Jun 2024 - Feb 2026',
       title: 'Full Stack Engineer II',
       institution: 'C3.ai via Paradyme Management',
       location: 'Redwood City, CA',
@@ -43,7 +54,7 @@ const Journey = () => {
       id: 3,
       category: 'Experience',
       date: 'Apr 2024 - Jun 2024',
-      title: 'Software Developer (Contract)',
+      title: 'Software Developer',
       institution: 'ec2 Software',
       location: 'Las Vegas, NV',
       description:
@@ -55,6 +66,19 @@ const Journey = () => {
     },
     {
       id: 4,
+      category: 'Experience',
+      date: 'April - August',
+      title: 'Launch Intern',
+      institution: 'EY',
+      description:
+        'Worked through EY Launch, developing professional consulting fundamentals across client communication, business analysis, and team-based delivery.',
+      highlights: [
+        'Built early experience translating business context into structured project work.',
+        'Collaborated in a professional services environment with an emphasis on client readiness.',
+      ],
+    },
+    {
+      id: 5,
       category: 'Experience',
       date: 'Jan 2023 - Apr 2023',
       title: 'Software Engineer Intern',
@@ -68,7 +92,7 @@ const Journey = () => {
       ],
     },
     {
-      id: 5,
+      id: 6,
       category: 'Experience',
       date: 'Jun 2022 - Aug 2022',
       title: 'Software Engineer Intern',
@@ -107,7 +131,16 @@ const Journey = () => {
     <section id="journey" className="journey-section">
       <div className="container">
         <h2 className="section-title">Journey</h2>
-        <p className="section-subtitle">Education and experience that shaped how I build products today.</p>
+        <p className="section-subtitle">Product engineering, client-facing delivery, and technical foundations.</p>
+
+        <div className="education-panel">
+          <span className="education-label">Education</span>
+          <div>
+            <h3>{education.degree}</h3>
+            <p className="education-school">{education.school}</p>
+            <p>{education.description}</p>
+          </div>
+        </div>
 
         <div className="journey-timeline" ref={itemsRef}>
           {timelineData.map((item) => (

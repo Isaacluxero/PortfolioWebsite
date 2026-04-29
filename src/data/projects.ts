@@ -18,6 +18,8 @@ export interface ProjectRecord {
   imageAlt?: string
   screenshots: ProjectScreenshot[]
   clientValue: string
+  tourTitle?: string
+  tourDescription?: string
   role: string
   problem: string
   solution: string
@@ -132,6 +134,63 @@ export const projects: ProjectRecord[] = [
   },
   {
     id: 3,
+    slug: 'home-server-infrastructure',
+    title: 'Server & Homelab Infrastructure',
+    shortDescription:
+      'A compact two-node home server environment for private services, media, automation, storage, dashboards, and remote access.',
+    outcome:
+      'Shows how I design, assemble, document, and operate real server infrastructure beyond just writing application code.',
+    tags: ['Servers', 'Kubernetes', 'Storage', 'Networking', 'Operations'],
+    preview: 'screenshot',
+    imageSrc: '/project-screenshots/server-topology.svg',
+    imageAlt: 'Sanitized diagram of a two-node server and homelab infrastructure setup.',
+    clientValue:
+      'For a small business, this is the same kind of thinking needed to install a reliable local server: choose the right hardware, connect storage and networking cleanly, and make services easy to operate.',
+    tourTitle: 'How the server is put together',
+    tourDescription:
+      'These sanitized diagrams explain the physical setup and operating model without exposing private addresses, credentials, internal dashboards, or configuration files.',
+    screenshots: [
+      {
+        src: '/project-screenshots/server-topology.svg',
+        alt: 'High-level topology diagram showing workstation server, NAS node, private network, and client devices.',
+        title: 'Physical topology',
+        caption:
+          'A primary mini-PC server and a secondary NAS/media node are connected through a private network so services can run locally while still being reachable remotely.',
+      },
+      {
+        src: '/project-screenshots/server-workloads.svg',
+        alt: 'Workload diagram showing media, productivity, automation, monitoring, storage, and private access layers.',
+        title: 'Service layout',
+        caption:
+          'The cluster separates workloads such as media, automation, productivity, dashboards, monitoring, storage, and private access so each service has a clear operational role.',
+      },
+      {
+        src: '/project-screenshots/server-operations.svg',
+        alt: 'Operations diagram showing documentation, manifests, backups, health checks, and incident notes.',
+        title: 'Operational discipline',
+        caption:
+          'The setup is documented with runbooks, inventory notes, deployment manifests, health checks, and incident records so the server can be maintained instead of becoming a mystery box.',
+      },
+    ],
+    role:
+      'Selected the hardware, installed Linux, configured a two-node k3s cluster, connected storage, organized workloads, and documented the operating model.',
+    problem:
+      'Small teams often need private file storage, dashboards, automation, media, backups, and internal tools, but they do not always need a large enterprise IT footprint.',
+    solution:
+      'I built a compact server environment using a mini-PC as the primary compute node and a low-power NAS-style node for storage and media-oriented workloads, tied together with Kubernetes, private networking, and documented operations.',
+    impact:
+      'The project demonstrates practical infrastructure judgment: hardware selection, Linux administration, container orchestration, storage planning, service routing, documentation, and ongoing maintenance.',
+    features: [
+      'Two physical server nodes with clear compute, control-plane, NAS, and media responsibilities',
+      'Lightweight Kubernetes orchestration for repeatable service deployment',
+      'Persistent storage planning for app data, media, and backups',
+      'Private remote access pattern without exposing internal services directly',
+      'Runbooks, inventory notes, and incident documentation for maintainability',
+    ],
+    stack: ['Linux', 'k3s', 'Docker', 'Kubernetes', 'Longhorn', 'NFS', 'Tailscale', 'Monitoring'],
+  },
+  {
+    id: 4,
     slug: 'inbox-concierge',
     title: 'Inbox Concierge',
     shortDescription:
@@ -186,7 +245,7 @@ export const projects: ProjectRecord[] = [
     stack: ['React', 'TanStack Query', 'Express', 'Prisma', 'PostgreSQL', 'OpenAI', 'Railway'],
   },
   {
-    id: 4,
+    id: 5,
     slug: 'restaurant-order-voice-agent',
     title: 'Restaurant Order Voice Agent',
     shortDescription:
@@ -234,7 +293,7 @@ export const projects: ProjectRecord[] = [
     stack: ['FastAPI', 'Python', 'Twilio', 'React', 'TypeScript', 'PostgreSQL', 'OpenAI'],
   },
   {
-    id: 5,
+    id: 6,
     slug: 'carrier-sales-agent',
     title: 'Carrier Sales Agent',
     shortDescription:

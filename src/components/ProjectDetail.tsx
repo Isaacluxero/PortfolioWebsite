@@ -37,9 +37,10 @@ const ProjectDetail = ({ project, onNavigate }: ProjectDetailProps) => {
         <section className="project-tour">
           <div className="project-section-heading">
             <p className="project-kicker">Product Tour</p>
-            <h2>What a client is looking at</h2>
+            <h2>{project.tourTitle ?? 'What a client is looking at'}</h2>
             <p>
-              These are real screens from the running app. The captions explain the business workflow, not just the technology behind it.
+              {project.tourDescription ??
+                'These are real screens from the running app. The captions explain the business workflow, not just the technology behind it.'}
             </p>
           </div>
 
