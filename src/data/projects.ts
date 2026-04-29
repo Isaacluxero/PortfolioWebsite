@@ -137,54 +137,55 @@ export const projects: ProjectRecord[] = [
     slug: 'home-server-infrastructure',
     title: 'Server & Homelab Infrastructure',
     shortDescription:
-      'A compact two-node home server environment for private services, media, automation, storage, dashboards, and remote access.',
+      'A private infrastructure buildout with a dedicated firewall, managed switching, compute, NAS storage, service hosting, monitoring, and secure remote access.',
     outcome:
-      'Shows how I design, assemble, document, and operate real server infrastructure beyond just writing application code.',
-    tags: ['Servers', 'Kubernetes', 'Storage', 'Networking', 'Operations'],
+      'Demonstrates the kind of practical systems work needed to install and operate internal servers for a small or mid-size business.',
+    tags: ['Infrastructure', 'Servers', 'Networking', 'Storage', 'Operations'],
     preview: 'screenshot',
     imageSrc: '/project-screenshots/server-topology.svg',
-    imageAlt: 'Sanitized diagram of a two-node server and homelab infrastructure setup.',
+    imageAlt: 'Sanitized diagram of a private infrastructure setup with firewall, switch, compute, NAS, and storage.',
     clientValue:
-      'For a small business, this is the same kind of thinking needed to install a reliable local server: choose the right hardware, connect storage and networking cleanly, and make services easy to operate.',
-    tourTitle: 'How the server is put together',
+      'For a business owner, this shows I can think beyond the app: plan the physical install, segment the network, choose hardware, wire storage correctly, and leave behind something maintainable.',
+    tourTitle: 'How the infrastructure is put together',
     tourDescription:
       'These sanitized diagrams explain the physical setup and operating model without exposing private addresses, credentials, internal dashboards, or configuration files.',
     screenshots: [
       {
         src: '/project-screenshots/server-topology.svg',
-        alt: 'High-level topology diagram showing workstation server, NAS node, private network, and client devices.',
+        alt: 'High-level topology diagram showing firewall, managed switch, mini-PC server, NAS node, hard drives, and client devices.',
         title: 'Physical topology',
         caption:
-          'A primary mini-PC server and a secondary NAS/media node are connected through a private network so services can run locally while still being reachable remotely.',
+          'The build is anchored by real infrastructure components: a firewall at the edge, a managed switch, a primary compute server, a NAS/media node, hard-drive-backed storage, and trusted client devices.',
       },
       {
         src: '/project-screenshots/server-workloads.svg',
         alt: 'Workload diagram showing media, productivity, automation, monitoring, storage, and private access layers.',
         title: 'Service layout',
         caption:
-          'The cluster separates workloads such as media, automation, productivity, dashboards, monitoring, storage, and private access so each service has a clear operational role.',
+          'Services are organized by responsibility so media, files, automation, dashboards, monitoring, storage, and private access are easier to operate and troubleshoot.',
       },
       {
         src: '/project-screenshots/server-operations.svg',
         alt: 'Operations diagram showing documentation, manifests, backups, health checks, and incident notes.',
         title: 'Operational discipline',
         caption:
-          'The setup is documented with runbooks, inventory notes, deployment manifests, health checks, and incident records so the server can be maintained instead of becoming a mystery box.',
+          'The system is treated like real infrastructure: documented topology, repeatable deployments, health checks, storage planning, incident notes, and a backlog for improvements.',
       },
     ],
     role:
-      'Selected the hardware, installed Linux, configured a two-node k3s cluster, connected storage, organized workloads, and documented the operating model.',
+      'Designed the physical layout, assembled the hardware stack, installed Linux, configured the container platform, connected storage, organized services, and documented the operating model.',
     problem:
-      'Small teams often need private file storage, dashboards, automation, media, backups, and internal tools, but they do not always need a large enterprise IT footprint.',
+      'Small teams often need private files, internal apps, dashboards, automation, backups, and remote access, but they do not need an oversized enterprise IT footprint to get there.',
     solution:
-      'I built a compact server environment using a mini-PC as the primary compute node and a low-power NAS-style node for storage and media-oriented workloads, tied together with Kubernetes, private networking, and documented operations.',
+      'I built a compact infrastructure stack around a firewall, managed switch, mini-PC compute server, NAS-style node, hard-drive-backed storage, container orchestration, private networking, and clear operating documentation.',
     impact:
-      'The project demonstrates practical infrastructure judgment: hardware selection, Linux administration, container orchestration, storage planning, service routing, documentation, and ongoing maintenance.',
+      'The project demonstrates practical infrastructure judgment: hardware selection, network design, Linux administration, service hosting, storage planning, remote access, documentation, and ongoing maintenance.',
     features: [
-      'Two physical server nodes with clear compute, control-plane, NAS, and media responsibilities',
+      'Physical install spanning firewall, managed switch, compute server, NAS/media node, and hard-drive-backed storage',
+      'Clear networking, compute, storage, service hosting, and remote access responsibilities',
       'Lightweight Kubernetes orchestration for repeatable service deployment',
-      'Persistent storage planning for app data, media, and backups',
-      'Private remote access pattern without exposing internal services directly',
+      'Persistent storage planning for app data, media libraries, and backup-oriented workflows',
+      'Private access pattern designed to avoid exposing internal services directly',
       'Runbooks, inventory notes, and incident documentation for maintainability',
     ],
     stack: ['Linux', 'k3s', 'Docker', 'Kubernetes', 'Longhorn', 'NFS', 'Tailscale', 'Monitoring'],

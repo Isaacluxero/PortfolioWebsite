@@ -44,7 +44,7 @@ const Hero = () => {
           I build practical software that turns messy business processes into clear, usable tools people can understand quickly.
         </p>
         <a href="#work" className="cta-button" onClick={handleClick}>
-          View Case Studies
+          View Previous Work
         </a>
         <div className="hero-proof" aria-label="Portfolio highlights">
           <span>Real apps</span>

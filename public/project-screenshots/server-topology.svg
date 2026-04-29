@@ -1,47 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 960" role="img" aria-labelledby="title desc">
-  <title id="title">Sanitized two-node server topology</title>
-  <desc id="desc">High-level architecture diagram for a mini-PC server, NAS node, private network, storage, and client access.</desc>
+  <title id="title">Sanitized private infrastructure topology</title>
+  <desc id="desc">High-level architecture diagram for firewall, managed switching, compute, NAS storage, hard drives, private networking, and client access.</desc>
   <rect width="1440" height="960" fill="#f6f7f4"/>
   <rect x="72" y="72" width="1296" height="816" rx="28" fill="#ffffff" stroke="#d9ded6" stroke-width="2"/>
-  <text x="116" y="142" fill="#101827" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800">Server &amp; Homelab Infrastructure</text>
-  <text x="116" y="186" fill="#667085" font-family="Inter, Arial, sans-serif" font-size="24">Sanitized physical topology for a compact private server environment</text>
+  <text x="116" y="142" fill="#101827" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800">Private Infrastructure Buildout</text>
+  <text x="116" y="186" fill="#667085" font-family="Inter, Arial, sans-serif" font-size="24">Sanitized physical topology for a small-business-grade server stack</text>
 
-  <rect x="116" y="252" width="360" height="246" rx="18" fill="#111827"/>
-  <text x="152" y="314" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">Primary Mini-PC</text>
-  <text x="152" y="356" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="22">Control plane + compute</text>
-  <text x="152" y="410" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="20">Linux</text>
-  <text x="152" y="444" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="20">k3s orchestration</text>
-  <text x="152" y="478" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="20">High-speed local storage</text>
+  <rect x="116" y="244" width="260" height="154" rx="18" fill="#111827"/>
+  <text x="150" y="304" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Firewall</text>
+  <text x="150" y="346" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="20">Network edge</text>
 
-  <rect x="964" y="252" width="360" height="246" rx="18" fill="#172554"/>
-  <text x="1000" y="314" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800">NAS / Media Node</text>
-  <text x="1000" y="356" fill="#bfdbfe" font-family="Inter, Arial, sans-serif" font-size="22">Storage + media workloads</text>
-  <text x="1000" y="410" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="20">Linux</text>
-  <text x="1000" y="444" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="20">k3s worker services</text>
-  <text x="1000" y="478" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="20">Shared app and media data</text>
+  <rect x="430" y="244" width="260" height="154" rx="18" fill="#172554"/>
+  <text x="464" y="304" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Managed Switch</text>
+  <text x="464" y="346" fill="#bfdbfe" font-family="Inter, Arial, sans-serif" font-size="20">Clean internal routing</text>
 
-  <rect x="550" y="266" width="340" height="218" rx="18" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
-  <text x="596" y="326" fill="#1d4ed8" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Private Network</text>
-  <text x="596" y="368" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="21">Local LAN + encrypted remote access</text>
-  <text x="596" y="422" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="20">Private access pattern</text>
+  <rect x="744" y="244" width="260" height="154" rx="18" fill="#1e293b"/>
+  <text x="778" y="304" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Geekom Compute</text>
+  <text x="778" y="346" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="20">Linux + services</text>
 
-  <line x1="476" y1="375" x2="550" y2="375" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
-  <line x1="890" y1="375" x2="964" y2="375" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
+  <rect x="1058" y="244" width="260" height="154" rx="18" fill="#334155"/>
+  <text x="1092" y="304" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Zima NAS Node</text>
+  <text x="1092" y="346" fill="#cbd5e1" font-family="Inter, Arial, sans-serif" font-size="20">Storage + media</text>
 
-  <rect x="196" y="604" width="272" height="150" rx="18" fill="#ecfdf3" stroke="#86efac" stroke-width="2"/>
-  <text x="232" y="664" fill="#166534" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">Storage</text>
-  <text x="232" y="706" fill="#475467" font-family="Inter, Arial, sans-serif" font-size="20">Volumes, shares, backups</text>
+  <line x1="376" y1="321" x2="430" y2="321" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
+  <line x1="690" y1="321" x2="744" y2="321" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
+  <line x1="1004" y1="321" x2="1058" y2="321" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
 
-  <rect x="584" y="604" width="272" height="150" rx="18" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
-  <text x="620" y="664" fill="#9a3412" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">Services</text>
-  <text x="620" y="706" fill="#475467" font-family="Inter, Arial, sans-serif" font-size="20">Dashboards, tools, media</text>
+  <rect x="152" y="542" width="300" height="150" rx="18" fill="#ecfdf3" stroke="#86efac" stroke-width="2"/>
+  <text x="188" y="602" fill="#166534" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">Hard Drives</text>
+  <text x="188" y="644" fill="#475467" font-family="Inter, Arial, sans-serif" font-size="20">Storage, media, backups</text>
 
-  <rect x="972" y="604" width="272" height="150" rx="18" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="2"/>
-  <text x="1008" y="664" fill="#6d28d9" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">Devices</text>
-  <text x="1008" y="706" fill="#475467" font-family="Inter, Arial, sans-serif" font-size="20">Laptops, phones, TVs</text>
+  <rect x="570" y="542" width="300" height="150" rx="18" fill="#fff7ed" stroke="#fdba74" stroke-width="2"/>
+  <text x="606" y="602" fill="#9a3412" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">Service Platform</text>
+  <text x="606" y="644" fill="#475467" font-family="Inter, Arial, sans-serif" font-size="20">Dashboards, tools, apps</text>
 
-  <line x1="332" y1="604" x2="332" y2="536" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
-  <line x1="720" y1="604" x2="720" y2="536" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
-  <line x1="1108" y1="604" x2="1108" y2="536" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
-  <line x1="332" y1="536" x2="1108" y2="536" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <rect x="988" y="542" width="300" height="150" rx="18" fill="#f5f3ff" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="1024" y="602" fill="#6d28d9" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">Trusted Devices</text>
+  <text x="1024" y="644" fill="#475467" font-family="Inter, Arial, sans-serif" font-size="20">Laptops, phones, TVs</text>
+
+  <line x1="302" y1="542" x2="302" y2="468" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <line x1="720" y1="542" x2="720" y2="468" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <line x1="1138" y1="542" x2="1138" y2="468" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <line x1="302" y1="468" x2="1138" y2="468" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+
+  <rect x="418" y="760" width="604" height="72" rx="36" fill="#eff6ff" stroke="#93c5fd" stroke-width="2"/>
+  <text x="720" y="805" fill="#1d4ed8" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800" text-anchor="middle">Private access, internal routing, and documented operations</text>
 </svg>

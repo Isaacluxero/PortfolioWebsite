@@ -33,7 +33,7 @@ const Work = ({ onNavigate }: WorkProps) => {
   return (
     <section id="work" className="work-section">
       <div className="container">
-        <h2 className="section-title">Selected Work</h2>
+        <h2 className="section-title">Previous Work</h2>
         <p className="section-subtitle">A few projects that show the kind of product and automation work I can build for clients.</p>
 
         <div className="work-grid" ref={cardsRef}>

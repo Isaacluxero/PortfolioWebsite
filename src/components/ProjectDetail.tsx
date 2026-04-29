@@ -17,7 +17,7 @@ const ProjectDetail = ({ project, onNavigate }: ProjectDetailProps) => {
 
         <section className="project-hero-panel">
           <div className="project-hero-copy">
-            <p className="project-kicker">Client-Facing Case Study</p>
+            <p className="project-kicker">Previous Work</p>
             <h1>{project.title}</h1>
             <p className="project-summary">{project.shortDescription}</p>
             <p className="project-value">{project.clientValue}</p>
