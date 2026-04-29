@@ -3,9 +3,10 @@
   background: white;
 }
 
-.education-panel {
+.education-panel,
+.clearance-panel {
   max-width: 800px;
-  margin: 0 auto 3rem;
+  margin: 0 auto 1rem;
   display: grid;
   grid-template-columns: 140px 1fr;
   gap: 1.5rem;
@@ -15,6 +16,10 @@
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 14px 40px rgba(15, 23, 42, 0.05);
+}
+
+.clearance-panel {
+  margin-bottom: 3rem;
 }
 
 .education-label {
@@ -30,12 +35,14 @@
   text-transform: uppercase;
 }
 
-.education-panel h3 {
+.education-panel h3,
+.clearance-panel h3 {
   font-size: 1.35rem;
   margin: 0.65rem 0 0.35rem;
 }
 
-.education-panel p {
+.education-panel p,
+.clearance-panel p {
   color: var(--text-secondary);
 }
 
@@ -60,52 +67,40 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 54px;
-  height: 34px;
-  padding: 0 0.75rem;
+  width: 86px;
+  height: 42px;
+  padding: 0.45rem 0.65rem;
   border: 1px solid rgba(10, 10, 10, 0.1);
   border-radius: 8px;
   background: #fff;
-  color: var(--text-primary);
-  font-size: 0.82rem;
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: 0;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
 }
 
-.logo-cal {
-  background: #003262;
-  border-color: #003262;
-  color: #fdb515;
-  font-family: Georgia, serif;
-  font-size: 1.05rem;
-  font-style: italic;
+.logo-mark img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
-.logo-innovaccer {
-  color: #2563eb;
+.logo-cal {
+  width: 118px;
 }
 
 .logo-c3 {
-  background: #111827;
-  border-color: #111827;
-  color: #fff;
+  width: 76px;
 }
 
 .logo-ec2 {
-  color: #475467;
-  text-transform: lowercase;
+  width: 92px;
 }
 
 .logo-ey {
-  background: #1f2937;
-  border-color: #1f2937;
-  color: #ffe600;
+  width: 58px;
 }
 
 .logo-salesforce {
-  color: #0176d3;
+  width: 76px;
 }
 
 .journey-timeline {
@@ -218,7 +213,8 @@
 }
 
 @media (max-width: 768px) {
-  .education-panel {
+  .education-panel,
+  .clearance-panel {
     grid-template-columns: 1fr;
     gap: 1rem;
   }

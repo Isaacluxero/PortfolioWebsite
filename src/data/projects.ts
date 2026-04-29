@@ -11,7 +11,6 @@ export interface ProjectRecord {
   title: string
   shortDescription: string
   outcome: string
-  tags: string[]
   liveUrl?: string
   preview: 'inbox' | 'restaurant' | 'carrier' | 'screenshot'
   imageSrc?: string
@@ -36,7 +35,6 @@ export const projects: ProjectRecord[] = [
     shortDescription:
       'A field-ready ranch record system for tracking cattle, sold animals, equipment, and reporting from a phone or browser.',
     outcome: 'Gives ranch operators a clean, offline-capable way to manage records without depending on spreadsheets in the field.',
-    tags: ['Offline App', 'Ranch Operations', 'Inventory', 'Reports', 'PWA'],
     liveUrl: 'https://cattle-record.vercel.app',
     preview: 'screenshot',
     imageSrc: '/project-screenshots/cattle-record.png',
@@ -85,7 +83,6 @@ export const projects: ProjectRecord[] = [
     shortDescription:
       'A private property-management dashboard for buildings, units, residents, rent status, maintenance, and owner reports.',
     outcome: 'Turns scattered rental notes into one clear operating view for property owners and managers.',
-    tags: ['Property Management', 'Rent Tracking', 'Maintenance', 'Reports', 'Private App'],
     preview: 'screenshot',
     imageSrc: '/project-screenshots/apartments-record.png',
     imageAlt: 'ApartmentRecord dashboard showing portfolio totals, rent collected, units, residents, and property cards.',
@@ -140,7 +137,6 @@ export const projects: ProjectRecord[] = [
       'A private infrastructure buildout with a dedicated firewall, managed switching, compute, NAS storage, service hosting, monitoring, and secure remote access.',
     outcome:
       'Demonstrates the kind of practical systems work needed to install and operate internal servers for a small or mid-size business.',
-    tags: ['Infrastructure', 'Servers', 'Networking', 'Storage', 'Operations'],
     preview: 'screenshot',
     imageSrc: '/project-screenshots/server-topology.svg',
     imageAlt: 'Sanitized diagram of a private infrastructure setup with firewall, switch, compute, NAS, and storage.',
@@ -197,7 +193,6 @@ export const projects: ProjectRecord[] = [
     shortDescription:
       'An AI email assistant that connects to Gmail, sorts messages, and lets users search their inbox with everyday language.',
     outcome: 'Shows how AI can be wrapped into a real business workflow instead of staying a standalone demo.',
-    tags: ['AI Assistant', 'Email Workflow', 'Search', 'Gmail', 'Analytics'],
     liveUrl: 'https://inboxconcierge-production.up.railway.app/login',
     preview: 'screenshot',
     imageSrc: '/project-screenshots/inbox-concierge.png',
@@ -252,7 +247,6 @@ export const projects: ProjectRecord[] = [
     shortDescription:
       'A phone-ordering assistant that can answer calls, understand menu requests, confirm orders, and show activity in a staff dashboard.',
     outcome: 'Demonstrates practical AI automation for a business that still depends on phone calls.',
-    tags: ['AI Phone Agent', 'Restaurant Ops', 'Orders', 'Dashboard', 'Automation'],
     preview: 'screenshot',
     imageSrc: '/project-screenshots/restaurant-order-voice-agent.png',
     imageAlt: 'Voice Agent Dashboard showing call totals, order totals, success rate, revenue, and top menu items.',
@@ -300,7 +294,6 @@ export const projects: ProjectRecord[] = [
     shortDescription:
       'A logistics dashboard for carrier verification, load activity, call outcomes, negotiation metrics, and sales performance.',
     outcome: 'Shows how custom software can turn operational calls and load activity into clear management visibility.',
-    tags: ['Logistics', 'Operations', 'Sales Dashboard', 'Calls', 'Compliance'],
     preview: 'screenshot',
     imageSrc: '/project-screenshots/carrier-sales-agent.png',
     imageAlt: 'Carrier Sales Agent dashboard showing calls, loads, success rate, sentiment, outcomes, and load distribution.',

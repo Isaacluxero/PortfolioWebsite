@@ -7,16 +7,17 @@ interface TimelineItem {
   date: string
   title: string
   institution: string
-  logo: string
-  logoClass: string
+  logoSrc: string
+  logoAlt: string
+  logoClass?: string
   location?: string
   description: string
   highlights?: string[]
 }
 
-const LogoMark = ({ label, className }: { label: string; className: string }) => (
-  <span className={`logo-mark ${className}`} aria-label={`${label} logo`}>
-    {label}
+const LogoMark = ({ src, alt, className }: { src: string; alt: string; className?: string }) => (
+  <span className={`logo-mark ${className ?? ''}`}>
+    <img src={src} alt={alt} />
   </span>
 )
 
@@ -25,7 +26,8 @@ const Journey = () => {
 
   const education = {
     school: 'University of California, Berkeley',
-    logo: 'Cal',
+    logoSrc: '/company-logos/berkeley.svg',
+    logoAlt: 'UC Berkeley logo',
     logoClass: 'logo-cal',
     degree: 'B.A. Data Science, Minor in Computer Science',
     description:
@@ -39,7 +41,8 @@ const Journey = () => {
       date: 'April 2026 - Present',
       title: 'Forward Deployed Engineer',
       institution: 'Innovaccer',
-      logo: 'Innovaccer',
+      logoSrc: '/company-logos/innovaccer.svg',
+      logoAlt: 'Innovaccer logo',
       logoClass: 'logo-innovaccer',
       description:
         'Building and deploying client-facing healthcare technology solutions that connect product engineering with real operational workflows.',
@@ -54,7 +57,8 @@ const Journey = () => {
       date: 'Jun 2024 - Feb 2026',
       title: 'Full Stack Engineer II',
       institution: 'C3.ai via Paradyme Management',
-      logo: 'C3.ai',
+      logoSrc: '/company-logos/c3ai.svg',
+      logoAlt: 'C3 AI logo',
       logoClass: 'logo-c3',
       location: 'Redwood City, CA',
       description:
@@ -70,7 +74,8 @@ const Journey = () => {
       date: 'Apr 2024 - Jun 2024',
       title: 'Software Developer',
       institution: 'ec2 Software',
-      logo: 'ec2',
+      logoSrc: '/company-logos/ec2.png',
+      logoAlt: 'ec2 Software logo',
       logoClass: 'logo-ec2',
       location: 'Las Vegas, NV',
       description:
@@ -86,7 +91,8 @@ const Journey = () => {
       date: 'April 2021 - August 2021',
       title: 'Launch',
       institution: 'EY',
-      logo: 'EY',
+      logoSrc: '/company-logos/ey.svg',
+      logoAlt: 'EY logo',
       logoClass: 'logo-ey',
       description:
         'Worked through EY Launch, developing professional consulting fundamentals across client communication, business analysis, and team-based delivery.',
@@ -101,7 +107,8 @@ const Journey = () => {
       date: 'Jun 2022 - Aug 2022',
       title: 'Software Engineer',
       institution: 'Salesforce',
-      logo: 'Salesforce',
+      logoSrc: '/company-logos/salesforce.svg',
+      logoAlt: 'Salesforce logo',
       logoClass: 'logo-salesforce',
       location: 'San Francisco, CA',
       description:
@@ -143,11 +150,19 @@ const Journey = () => {
           <span className="education-label">Education</span>
           <div className="education-content">
             <div className="institution-row">
-              <LogoMark label={education.logo} className={education.logoClass} />
+              <LogoMark src={education.logoSrc} alt={education.logoAlt} className={education.logoClass} />
               <p className="education-school">{education.school}</p>
             </div>
             <h3>{education.degree}</h3>
             <p>{education.description}</p>
+          </div>
+        </div>
+
+        <div className="clearance-panel">
+          <span className="education-label">Clearance</span>
+          <div>
+            <h3>Active TS/SCI clearance</h3>
+            <p>Available for government, defense, and cleared technical work where trusted access matters.</p>
           </div>
         </div>
 
@@ -160,7 +175,7 @@ const Journey = () => {
                 <span className="timeline-date">{item.date}</span>
                 <h3>{item.title}</h3>
                 <div className="institution-row">
-                  <LogoMark label={item.logo} className={item.logoClass} />
+                  <LogoMark src={item.logoSrc} alt={item.logoAlt} className={item.logoClass} />
                   <p className="timeline-institution">{item.institution}</p>
                 </div>
                 {item.location ? <p className="timeline-location">{item.location}</p> : null}

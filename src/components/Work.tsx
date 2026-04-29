@@ -46,13 +46,6 @@ const Work = ({ onNavigate }: WorkProps) => {
                 <h3>{project.title}</h3>
                 <p>{project.shortDescription}</p>
                 <p className="work-outcome">{project.outcome}</p>
-                <div className="work-tags">
-                  {project.tags.map((tag, index) => (
-                    <span key={index} className="tag">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
                 <div className="work-links">
                   <button className="work-link work-link-primary" onClick={() => onNavigate(`/projects/${project.slug}`)}>
                     View Project

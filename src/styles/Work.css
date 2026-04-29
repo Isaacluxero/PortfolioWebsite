@@ -65,21 +65,6 @@
   font-weight: 650;
 }
 
-.work-tags {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.25rem;
-}
-
-.tag {
-  padding: 0.4rem 0.8rem;
-  background: var(--secondary-color);
-  border-radius: 20px;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-}
-
 .work-links {
   display: flex;
   gap: 0.75rem;
