@@ -22,18 +22,15 @@ const ProjectDetail = ({ project, onNavigate }: ProjectDetailProps) => {
             <p className="project-summary">{project.shortDescription}</p>
             <p className="project-role">{project.role}</p>
             <div className="project-actions">
-              <a href={project.repoUrl} target="_blank" rel="noreferrer" className="detail-link">
-                View Code
-              </a>
               {project.liveUrl ? (
                 <a href={project.liveUrl} target="_blank" rel="noreferrer" className="detail-link detail-link-primary">
-                  Live Demo
+                  Open App
                 </a>
               ) : null}
             </div>
           </div>
           <div className="project-hero-visual">
-            <ProjectPreview variant={project.preview} />
+            <ProjectPreview variant={project.preview} imageSrc={project.imageSrc} imageAlt={project.imageAlt} />
           </div>
         </section>
 

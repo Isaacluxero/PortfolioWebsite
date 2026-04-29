@@ -13,6 +13,25 @@
   min-height: 250px;
 }
 
+.screenshot-preview {
+  padding: 0;
+  background: #111827;
+  overflow: hidden;
+}
+
+.screenshot-preview img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.project-hero-visual .screenshot-preview img {
+  object-fit: contain;
+  background: #f7f9fc;
+}
+
 .preview-topbar {
   display: flex;
   align-items: center;

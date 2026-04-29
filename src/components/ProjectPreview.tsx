@@ -1,11 +1,21 @@
 import '../styles/ProjectPreview.css'
 
 interface ProjectPreviewProps {
-  variant: 'inbox' | 'restaurant' | 'carrier'
+  variant: 'inbox' | 'restaurant' | 'carrier' | 'screenshot'
   compact?: boolean
+  imageSrc?: string
+  imageAlt?: string
 }
 
-const ProjectPreview = ({ variant, compact = false }: ProjectPreviewProps) => {
+const ProjectPreview = ({ variant, compact = false, imageSrc, imageAlt }: ProjectPreviewProps) => {
+  if (variant === 'screenshot' && imageSrc) {
+    return (
+      <div className={`project-preview screenshot-preview ${compact ? 'compact' : ''}`}>
+        <img src={imageSrc} alt={imageAlt ?? ''} />
+      </div>
+    )
+  }
+
   return (
     <div className={`project-preview ${variant} ${compact ? 'compact' : ''}`}>
       {variant === 'inbox' ? (

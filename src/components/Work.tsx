@@ -40,7 +40,7 @@ const Work = ({ onNavigate }: WorkProps) => {
           {projects.map((project) => (
             <article key={project.id} className="work-card">
               <div className="work-image-placeholder">
-                <ProjectPreview variant={project.preview} compact />
+                <ProjectPreview variant={project.preview} imageSrc={project.imageSrc} imageAlt={project.imageAlt} compact />
               </div>
               <div className="work-content">
                 <h3>{project.title}</h3>
@@ -57,12 +57,9 @@ const Work = ({ onNavigate }: WorkProps) => {
                   <button className="work-link work-link-primary" onClick={() => onNavigate(`/projects/${project.slug}`)}>
                     View Project
                   </button>
-                  <a href={project.repoUrl} target="_blank" rel="noreferrer" className="work-link">
-                    View Code
-                  </a>
                   {project.liveUrl ? (
                     <a href={project.liveUrl} target="_blank" rel="noreferrer" className="work-link">
-                      Live Demo
+                      Open App
                     </a>
                   ) : null}
                 </div>
