@@ -56,7 +56,7 @@ const Journey = () => {
       category: 'Experience',
       date: 'Jun 2024 - Feb 2026',
       title: 'Full Stack Engineer II',
-      institution: 'C3.ai via Paradyme Management',
+      institution: 'C3.ai',
       logoSrc: '/company-logos/c3ai.svg',
       logoAlt: 'C3 AI logo',
       logoClass: 'logo-c3',
