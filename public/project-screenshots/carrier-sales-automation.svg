@@ -1,0 +1,64 @@
+<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="960" fill="#F4F6FA"/>
+  <rect x="0" y="0" width="1440" height="82" fill="#FFFFFF"/>
+  <line x1="0" y1="82" x2="1440" y2="82" stroke="#DDE3EE"/>
+  <text x="80" y="55" fill="#1F2937" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Carrier Sales Automation</text>
+  <text x="336" y="55" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="16">Loads</text>
+  <text x="436" y="55" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="16">Calls</text>
+  <text x="524" y="55" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="16">Insights</text>
+
+  <text x="80" y="151" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Client Operations Dashboard</text>
+  <text x="80" y="184" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="18">AI-assisted carrier outreach, load matching, and call analytics for logistics teams.</text>
+  <rect x="1164" y="128" width="196" height="48" rx="8" fill="#2563EB"/>
+  <text x="1202" y="159" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Refresh Metrics</text>
+
+  <g>
+    <rect x="80" y="238" width="280" height="166" rx="8" fill="#FFFFFF" stroke="#DDE3EE"/>
+    <text x="108" y="287" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">TOTAL CALLS</text>
+    <text x="108" y="348" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">150</text>
+    <path d="M312 313c20 8 31 22 38 42" stroke="#64748B" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g>
+    <rect x="386" y="238" width="280" height="166" rx="8" fill="#FFFFFF" stroke="#DDE3EE"/>
+    <text x="414" y="287" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">LOADS REVIEWED</text>
+    <text x="414" y="348" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">45</text>
+    <rect x="594" y="304" width="40" height="40" rx="8" fill="#DBEAFE"/>
+  </g>
+  <g>
+    <rect x="692" y="238" width="280" height="166" rx="8" fill="#FFFFFF" stroke="#DDE3EE"/>
+    <text x="720" y="287" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">AUTOMATION SUCCESS</text>
+    <text x="720" y="348" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">80%</text>
+    <path d="M892 348l24-24 18 18 28-42" stroke="#2563EB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g>
+    <rect x="998" y="238" width="362" height="166" rx="8" fill="#FFFFFF" stroke="#DDE3EE"/>
+    <text x="1026" y="287" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">AVG SENTIMENT</text>
+    <text x="1026" y="348" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">4.2/5</text>
+    <text x="1234" y="340" fill="#059669" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Positive</text>
+  </g>
+
+  <rect x="80" y="448" width="596" height="310" rx="8" fill="#FFFFFF" stroke="#DDE3EE"/>
+  <text x="112" y="494" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">Call Outcomes</text>
+  <text x="112" y="548" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="18">Load accepted</text>
+  <text x="612" y="548" fill="#059669" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="end">120</text>
+  <rect x="112" y="572" width="500" height="12" rx="6" fill="#E2E8F0"/>
+  <rect x="112" y="572" width="420" height="12" rx="6" fill="#059669"/>
+  <text x="112" y="628" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="18">No load accepted</text>
+  <text x="612" y="628" fill="#F59E0B" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="end">18</text>
+  <rect x="112" y="652" width="500" height="12" rx="6" fill="#E2E8F0"/>
+  <rect x="112" y="652" width="78" height="12" rx="6" fill="#F59E0B"/>
+  <text x="112" y="708" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="18">Verification failed</text>
+  <text x="612" y="708" fill="#DC2626" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="end">12</text>
+
+  <rect x="704" y="448" width="656" height="310" rx="8" fill="#FFFFFF" stroke="#DDE3EE"/>
+  <text x="736" y="494" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">Load Distribution</text>
+  <rect x="736" y="536" width="126" height="166" rx="8" fill="#DBEAFE"/>
+  <rect x="904" y="494" width="126" height="208" rx="8" fill="#BFDBFE"/>
+  <rect x="1072" y="573" width="126" height="129" rx="8" fill="#93C5FD"/>
+  <text x="799" y="736" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="16" text-anchor="middle">dry van</text>
+  <text x="967" y="736" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="16" text-anchor="middle">reefer</text>
+  <text x="1135" y="736" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="16" text-anchor="middle">flatbed</text>
+  <text x="799" y="522" fill="#2563EB" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">20</text>
+  <text x="967" y="480" fill="#2563EB" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">14</text>
+  <text x="1135" y="559" fill="#2563EB" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">11</text>
+</svg>

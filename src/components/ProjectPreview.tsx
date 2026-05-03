@@ -29,7 +29,7 @@ const ProjectPreview = ({ variant, compact = false, imageSrc, imageAlt, framed =
       {variant === 'inbox' ? (
         <>
           <div className="preview-topbar">
-            <span className="preview-pill">Inbox Concierge</span>
+            <span className="preview-pill">AI Email Assistant</span>
             <span className="preview-status">Connected</span>
           </div>
           <div className="preview-layout two-column">
@@ -97,7 +97,7 @@ const ProjectPreview = ({ variant, compact = false, imageSrc, imageAlt, framed =
       {variant === 'carrier' ? (
         <>
           <div className="preview-topbar">
-            <span className="preview-pill">Carrier Sales Agent</span>
+            <span className="preview-pill">Carrier Sales Dashboard</span>
             <span className="preview-status cool">Dashboard</span>
           </div>
           <div className="preview-layout stacked">

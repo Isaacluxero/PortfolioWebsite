@@ -31,7 +31,7 @@ const Journey = () => {
     logoClass: 'logo-cal',
     degree: 'B.A. Data Science, Minor in Computer Science',
     description:
-      'Coursework in machine learning, AI, computer security, cloud computing, data science, and systems fundamentals.',
+      'Studied data, AI, security, cloud systems, and the software foundations behind reliable products.',
   }
 
   const timelineData: TimelineItem[] = [
@@ -45,10 +45,10 @@ const Journey = () => {
       logoAlt: 'Innovaccer logo',
       logoClass: 'logo-innovaccer',
       description:
-        'Building and deploying client-facing healthcare technology solutions that connect product engineering with real operational workflows.',
+        'Building healthcare software with the people who use it, turning real operational needs into product improvements.',
       highlights: [
-        'Work directly with implementation context to translate customer needs into usable product behavior.',
-        'Bridge engineering, data, and stakeholder requirements in forward-deployed environments.',
+        'Work directly with customer context so the software fits real workflows.',
+        'Connect product, data, and stakeholder needs during hands-on delivery.',
       ],
     },
     {
@@ -62,10 +62,10 @@ const Journey = () => {
       logoClass: 'logo-c3',
       location: 'Redwood City, CA',
       description:
-        'Worked on the Property Appraisal team building product experiences around AI and ML-driven property valuation workflows.',
+        'Built tools that helped property appraisal teams review AI-assisted valuation work more clearly.',
       highlights: [
-        'Built and improved React and Redux interfaces to make appraisal workflows faster and easier to use.',
-        'Designed backend APIs and optimized algorithms to surface ML model outputs reliably in the product.',
+        'Improved product screens so appraisal work was faster and easier to review.',
+        'Helped make model results easier for users to find, trust, and act on.',
       ],
     },
     {
@@ -79,30 +79,14 @@ const Journey = () => {
       logoClass: 'logo-ec2',
       location: 'Las Vegas, NV',
       description:
-        'Shipped product improvements for radiopharmaceutical management software used to track inventory and patient administration.',
+        'Improved software used by medical teams to manage inventory and patient administration.',
       highlights: [
-        'Redesigned core React and Redux interfaces for NMIS and RMIS.',
-        'Improved usability enough to contribute to a 15% increase in customer satisfaction scores.',
+        'Redesigned key screens used in daily operations.',
+        'Helped improve usability and customer satisfaction.',
       ],
     },
     {
       id: 4,
-      category: 'Experience',
-      date: 'April 2021 - August 2021',
-      title: 'Launch',
-      institution: 'EY',
-      logoSrc: '/company-logos/ey.svg',
-      logoAlt: 'EY logo',
-      logoClass: 'logo-ey',
-      description:
-        'Worked through EY Launch, developing professional consulting fundamentals across client communication, business analysis, and team-based delivery.',
-      highlights: [
-        'Built early experience translating business context into structured project work.',
-        'Collaborated in a professional services environment with an emphasis on client readiness.',
-      ],
-    },
-    {
-      id: 5,
       category: 'Experience',
       date: 'Jun 2022 - Aug 2022',
       title: 'Software Engineer',
@@ -112,10 +96,26 @@ const Journey = () => {
       logoClass: 'logo-salesforce',
       location: 'San Francisco, CA',
       description:
-        'Contributed to Cloud Atlas, a globally replicated data repository used for tenant routing and connection metadata.',
+        'Worked on internal cloud systems that helped Salesforce route customer data reliably.',
       highlights: [
-        'Reduced lookup times for global task functions by 20% and eliminated timeout issues.',
-        'Explored large-scale storage architecture and data movement across data centers and AWS.',
+        'Helped make data lookups faster and more reliable.',
+        'Worked with large-scale cloud systems across data centers and AWS.',
+      ],
+    },
+    {
+      id: 5,
+      category: 'Experience',
+      date: 'April 2021 - August 2021',
+      title: 'Client Consulting Fellow',
+      institution: 'EY',
+      logoSrc: '/company-logos/ey.svg',
+      logoAlt: 'EY logo',
+      logoClass: 'logo-ey',
+      description:
+        'Developed early consulting experience around client communication, business analysis, and team delivery.',
+      highlights: [
+        'Learned how to turn business context into structured project work.',
+        'Worked in a professional services environment focused on client readiness.',
       ],
     },
   ]
@@ -143,8 +143,8 @@ const Journey = () => {
   return (
     <section id="journey" className="journey-section">
       <div className="container">
-        <h2 className="section-title">Journey</h2>
-        <p className="section-subtitle">Product engineering, client-facing delivery, and technical foundations.</p>
+        <h2 className="section-title">Experience</h2>
+        <p className="section-subtitle">A mix of client-facing delivery, product engineering, and practical software work.</p>
 
         <div className="education-panel">
           <span className="education-label">Education</span>

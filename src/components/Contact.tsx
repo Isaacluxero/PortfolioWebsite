@@ -17,8 +17,10 @@ const Contact = () => {
   return (
     <section id="contact" className="contact-section">
       <div className="container">
-        <h2 className="section-title">Get In Touch</h2>
-        <p className="section-subtitle">Let's build something together</p>
+        <h2 className="section-title">Start A Conversation</h2>
+        <p className="section-subtitle">
+          Have a process you want automated or cleaned up? Send me a short description and I will tell you what I would build first.
+        </p>
 
         <div className="contact-links">
           {contactLinks.map((link, index) => {

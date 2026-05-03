@@ -10,6 +10,31 @@
   margin-top: 3rem;
 }
 
+.work-secondary {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(10, 10, 10, 0.08);
+}
+
+.work-secondary-heading {
+  max-width: 720px;
+}
+
+.work-secondary-heading h3 {
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  line-height: 1.1;
+  margin-bottom: 0.65rem;
+}
+
+.work-secondary-heading p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.work-grid-secondary {
+  margin-top: 1.5rem;
+}
+
 .work-card {
   background: white;
   border-radius: 8px;
@@ -31,6 +56,10 @@
 .work-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 24px 55px rgba(15, 23, 42, 0.1);
+}
+
+.work-card-secondary {
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.035);
 }
 
 .work-image-placeholder {

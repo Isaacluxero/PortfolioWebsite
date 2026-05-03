@@ -3,19 +3,19 @@ import '../styles/Hero.css'
 const heroScreens = [
   {
     src: '/project-screenshots/cattle-record.png',
-    alt: 'CattleRecord ranch operations dashboard.',
+    alt: 'Ranch records operations dashboard.',
   },
   {
     src: '/project-screenshots/apartments-record.png',
-    alt: 'ApartmentRecord property management dashboard.',
+    alt: 'Property management dashboard.',
   },
   {
     src: '/project-screenshots/inbox-concierge-inbox.png',
-    alt: 'Inbox Concierge email triage dashboard.',
+    alt: 'AI email assistant triage dashboard.',
   },
   {
-    src: '/project-screenshots/carrier-sales-agent.png',
-    alt: 'Carrier Sales Agent logistics dashboard.',
+    src: '/project-screenshots/carrier-sales-automation.svg',
+    alt: 'Carrier sales logistics dashboard.',
   },
 ]
 
@@ -39,17 +39,17 @@ const Hero = () => {
       </div>
       <div className="hero-content">
         <h1 className="hero-title">Isaac Lucero</h1>
-        <p className="hero-subtitle">Software Engineer for client-ready products, dashboards, and AI workflows.</p>
+        <p className="hero-subtitle">AI automations and custom tools for messy business workflows.</p>
         <p className="hero-description">
-          I build practical software that turns messy business processes into clear, usable tools people can understand quickly.
+          If your process is stuck in spreadsheets, phone calls, inboxes, or disconnected tools, I can turn it into something your team can actually use.
         </p>
         <a href="#work" className="cta-button" onClick={handleClick}>
           View Previous Work
         </a>
         <div className="hero-proof" aria-label="Portfolio highlights">
-          <span>Real apps</span>
-          <span>Business workflows</span>
-          <span>AI automation</span>
+          <span>Real client work</span>
+          <span>Clear dashboards</span>
+          <span>Private workflows</span>
         </div>
       </div>
     </section>

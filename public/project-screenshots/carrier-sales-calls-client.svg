@@ -1,0 +1,58 @@
+<svg width="1440" height="960" viewBox="0 0 1440 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="960" fill="#F4F6FA"/>
+  <rect x="0" y="0" width="1440" height="82" fill="#FFFFFF"/>
+  <line x1="0" y1="82" x2="1440" y2="82" stroke="#DDE3EE"/>
+  <text x="80" y="55" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="16">Overview</text>
+  <text x="196" y="55" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="16">Load Review</text>
+  <text x="334" y="55" fill="#1D4ED8" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Call Intelligence</text>
+  <rect x="334" y="78" width="126" height="4" fill="#2563EB"/>
+
+  <text x="80" y="150" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">Call Intelligence</text>
+  <text x="80" y="184" fill="#64748B" font-family="Inter, Arial, sans-serif" font-size="18">Review outreach quality, call results, and recommended follow-up actions.</text>
+
+  <rect x="80" y="238" width="1280" height="584" rx="8" fill="#FFFFFF" stroke="#DDE3EE"/>
+  <rect x="80" y="238" width="1280" height="58" rx="8" fill="#F8FAFC"/>
+  <text x="112" y="274" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800">CARRIER</text>
+  <text x="342" y="274" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800">LOAD</text>
+  <text x="536" y="274" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800">OUTCOME</text>
+  <text x="760" y="274" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800">SENTIMENT</text>
+  <text x="984" y="274" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800">NEXT ACTION</text>
+
+  <g>
+    <line x1="80" y1="354" x2="1360" y2="354" stroke="#E2E8F0"/>
+    <text x="112" y="332" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Atlas Freight</text>
+    <text x="342" y="332" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="17">LD-1042</text>
+    <rect x="536" y="309" width="138" height="32" rx="16" fill="#DCFCE7"/>
+    <text x="605" y="330" fill="#15803D" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" text-anchor="middle">Accepted</text>
+    <text x="760" y="332" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="17">Positive</text>
+    <text x="984" y="332" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="17">Send confirmation</text>
+  </g>
+  <g>
+    <line x1="80" y1="426" x2="1360" y2="426" stroke="#E2E8F0"/>
+    <text x="112" y="404" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Summit Logistics</text>
+    <text x="342" y="404" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="17">LD-1043</text>
+    <rect x="536" y="381" width="138" height="32" rx="16" fill="#FEF3C7"/>
+    <text x="605" y="402" fill="#B45309" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" text-anchor="middle">Negotiating</text>
+    <text x="760" y="404" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="17">Neutral</text>
+    <text x="984" y="404" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="17">Review counteroffer</text>
+  </g>
+  <g>
+    <line x1="80" y1="498" x2="1360" y2="498" stroke="#E2E8F0"/>
+    <text x="112" y="476" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Ridgeway Carriers</text>
+    <text x="342" y="476" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="17">LD-1044</text>
+    <rect x="536" y="453" width="138" height="32" rx="16" fill="#FEE2E2"/>
+    <text x="605" y="474" fill="#B91C1C" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800" text-anchor="middle">No match</text>
+    <text x="760" y="476" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="17">Negative</text>
+    <text x="984" y="476" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="17">Find alternate carrier</text>
+  </g>
+
+  <rect x="112" y="570" width="594" height="188" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="144" y="616" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">Transcript Summary</text>
+  <text x="144" y="656" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="17">Carrier accepted the Dallas load after the rate matched target guidance.</text>
+  <text x="144" y="694" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="17">System flagged confirmation email and dispatch handoff as next steps.</text>
+
+  <rect x="742" y="570" width="586" height="188" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="774" y="616" fill="#0F172A" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">Automation Notes</text>
+  <text x="774" y="656" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="17">Rules combine carrier status, route fit, call sentiment, and negotiated rate.</text>
+  <text x="774" y="694" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="17">Dashboard exposes outcomes without leaking internal implementation details.</text>
+</svg>

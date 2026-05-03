@@ -43,6 +43,15 @@ const Navbar = ({ activeSection }: NavbarProps) => {
           </li>
           <li>
             <a
+              href="#services"
+              className={`nav-link ${activeSection === 'services' ? 'active' : ''}`}
+              onClick={(e) => handleClick(e, 'services')}
+            >
+              Services
+            </a>
+          </li>
+          <li>
+            <a
               href="#work"
               className={`nav-link ${activeSection === 'work' ? 'active' : ''}`}
               onClick={(e) => handleClick(e, 'work')}
@@ -56,7 +65,7 @@ const Navbar = ({ activeSection }: NavbarProps) => {
               className={`nav-link ${activeSection === 'journey' ? 'active' : ''}`}
               onClick={(e) => handleClick(e, 'journey')}
             >
-              Journey
+              Experience
             </a>
           </li>
           <li>

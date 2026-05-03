@@ -8,7 +8,9 @@ interface WorkProps {
 }
 
 const Work = ({ onNavigate }: WorkProps) => {
-  const cardsRef = useRef<HTMLDivElement>(null)
+  const workRef = useRef<HTMLDivElement>(null)
+  const aiProjects = projects.filter((project) => project.category === 'ai')
+  const generalProjects = projects.filter((project) => project.category === 'general')
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,7 +24,7 @@ const Work = ({ onNavigate }: WorkProps) => {
       { threshold: 0.1, rootMargin: '0px 0px -100px 0px' }
     )
 
-    const cards = cardsRef.current?.querySelectorAll('.work-card')
+    const cards = workRef.current?.querySelectorAll('.work-card')
     cards?.forEach((card) => observer.observe(card))
 
     return () => {
@@ -32,12 +34,12 @@ const Work = ({ onNavigate }: WorkProps) => {
 
   return (
     <section id="work" className="work-section">
-      <div className="container">
-        <h2 className="section-title">Previous Work</h2>
-        <p className="section-subtitle">A few projects that show the kind of product and automation work I can build for clients.</p>
+      <div className="container" ref={workRef}>
+        <h2 className="section-title">AI Automations</h2>
+        <p className="section-subtitle">Examples of tools that answer calls, organize email, track work, and give teams a clearer view of what is happening.</p>
 
-        <div className="work-grid" ref={cardsRef}>
-          {projects.map((project) => (
+        <div className="work-grid">
+          {aiProjects.map((project) => (
             <article key={project.id} className="work-card">
               <div className="work-image-placeholder">
                 <ProjectPreview variant={project.preview} imageSrc={project.imageSrc} imageAlt={project.imageAlt} compact />
@@ -50,15 +52,37 @@ const Work = ({ onNavigate }: WorkProps) => {
                   <button className="work-link work-link-primary" onClick={() => onNavigate(`/projects/${project.slug}`)}>
                     View Project
                   </button>
-                  {project.liveUrl ? (
-                    <a href={project.liveUrl} target="_blank" rel="noreferrer" className="work-link">
-                      Open App
-                    </a>
-                  ) : null}
                 </div>
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="work-secondary">
+          <div className="work-secondary-heading">
+            <h3>General Dev Work</h3>
+            <p>Other custom software and setup work for teams that need reliable tools, not another spreadsheet.</p>
+          </div>
+
+          <div className="work-grid work-grid-secondary">
+            {generalProjects.map((project) => (
+              <article key={project.id} className="work-card work-card-secondary">
+                <div className="work-image-placeholder">
+                  <ProjectPreview variant={project.preview} imageSrc={project.imageSrc} imageAlt={project.imageAlt} compact />
+                </div>
+                <div className="work-content">
+                  <h3>{project.title}</h3>
+                  <p>{project.shortDescription}</p>
+                  <p className="work-outcome">{project.outcome}</p>
+                  <div className="work-links">
+                    <button className="work-link work-link-primary" onClick={() => onNavigate(`/projects/${project.slug}`)}>
+                      View Project
+                    </button>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>

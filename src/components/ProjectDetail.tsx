@@ -8,6 +8,8 @@ interface ProjectDetailProps {
 }
 
 const ProjectDetail = ({ project, onNavigate }: ProjectDetailProps) => {
+  const projectKicker = project.category === 'ai' ? 'AI Automation Demo' : 'Client Work'
+
   return (
     <main className="project-detail-page">
       <div className="project-detail-shell">
@@ -17,30 +19,44 @@ const ProjectDetail = ({ project, onNavigate }: ProjectDetailProps) => {
 
         <section className="project-hero-panel">
           <div className="project-hero-copy">
-            <p className="project-kicker">Previous Work</p>
+            <p className="project-kicker">{projectKicker}</p>
             <h1>{project.title}</h1>
             <p className="project-summary">{project.shortDescription}</p>
-            <p className="project-value">{project.clientValue}</p>
-            <div className="project-actions">
-              {project.liveUrl ? (
-                <a href={project.liveUrl} target="_blank" rel="noreferrer" className="detail-link detail-link-primary">
-                  Open App
-                </a>
-              ) : null}
-            </div>
+            <p className="project-value">{project.outcome}</p>
           </div>
           <div className="project-hero-visual">
             <ProjectPreview variant={project.preview} imageSrc={project.imageSrc} imageAlt={project.imageAlt} framed />
           </div>
         </section>
 
+        <section className="project-story">
+          <div className="story-lead">
+            <p className="project-kicker">Why it mattered</p>
+            <h2>{project.clientValue}</h2>
+          </div>
+          <div className="story-body">
+            <div>
+              <span>Before</span>
+              <p>{project.problem}</p>
+            </div>
+            <div>
+              <span>After</span>
+              <p>{project.solution}</p>
+            </div>
+            <div>
+              <span>Value</span>
+              <p>{project.impact}</p>
+            </div>
+          </div>
+        </section>
+
         <section className="project-tour">
           <div className="project-section-heading">
-            <p className="project-kicker">Product Tour</p>
-            <h2>{project.tourTitle ?? 'What a client is looking at'}</h2>
+            <p className="project-kicker">Workflow</p>
+            <h2>{project.tourTitle ?? 'What this looks like in practice'}</h2>
             <p>
               {project.tourDescription ??
-                'These are real screens from the running app. The captions explain the business workflow, not just the technology behind it.'}
+                'These screens show the parts of the workflow a client or team would actually use day to day.'}
             </p>
           </div>
 
@@ -60,41 +76,23 @@ const ProjectDetail = ({ project, onNavigate }: ProjectDetailProps) => {
           </div>
         </section>
 
-        <section className="project-detail-grid">
-          <article className="detail-card full-width case-card">
-            <p className="detail-eyebrow">My role</p>
-            <h2>What I built</h2>
-            <p>{project.role}</p>
-          </article>
-          <article className="detail-card">
-            <p className="detail-eyebrow">Problem</p>
-            <h2>The business gap</h2>
-            <p>{project.problem}</p>
-          </article>
-          <article className="detail-card">
-            <p className="detail-eyebrow">Solution</p>
-            <h2>The product approach</h2>
-            <p>{project.solution}</p>
-          </article>
-          <article className="detail-card">
-            <p className="detail-eyebrow">Impact</p>
-            <h2>Why it matters</h2>
-            <p>{project.impact}</p>
-          </article>
-          <article className="detail-card">
-            <p className="detail-eyebrow">Features</p>
-            <h2>What it can do</h2>
+        <section className="project-wrapup">
+          <article className="client-takeaway">
+            <p className="project-kicker">Client takeaway</p>
+            <h2>What this gave the user</h2>
             <ul className="detail-list">
               {project.features.map((feature) => (
                 <li key={feature}>{feature}</li>
               ))}
             </ul>
           </article>
-          <article className="detail-card full-width">
-            <p className="detail-eyebrow">Build</p>
-            <h2>Tech Stack</h2>
+
+          <article className="builder-note">
+            <p className="project-kicker">My part</p>
+            <h2>I handled the product thinking and the build.</h2>
+            <p>{project.role}</p>
             <div className="detail-tags">
-              {project.stack.map((item) => (
+              {project.buildTags.map((item) => (
                 <span key={item} className="detail-tag">
                   {item}
                 </span>
